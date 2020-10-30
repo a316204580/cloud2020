@@ -1,0 +1,20 @@
+package com.atguigu.myrule;
+
+import com.netflix.loadbalancer.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ *
+ * @author PaulFang
+ * @date 2020/10/27
+ */
+@Configuration
+public class MySelfRule {
+
+    @Bean
+    public IRule myRule(){
+
+        return new RoundRobinRule();
+    }
+}
